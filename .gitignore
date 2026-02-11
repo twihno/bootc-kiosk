@@ -1,0 +1,8 @@
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Build artifacts
+.buildx-cache/
