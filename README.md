@@ -72,6 +72,15 @@ The default kiosk launches Firefox pointing to the Fedora Project website. To cu
 - **Browser**: Firefox (kiosk mode)
 - **Default User**: kiosk (password: kiosk)
 
+## Security Considerations
+
+⚠️ **Important**: The default kiosk user password is set to `kiosk` for testing purposes. For production deployments:
+
+1. Change the default password before deployment
+2. Consider using auto-login for kiosk mode instead of a password
+3. The kiosk user does not have sudo privileges by default
+4. Review and customize the kiosk startup script according to your security requirements
+
 ## License
 
 This project configuration is provided as-is for kiosk deployments using Fedora bootc.

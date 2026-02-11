@@ -18,8 +18,8 @@ RUN dnf -y update && \
 RUN systemctl set-default graphical.target && \
     systemctl enable gdm
 
-# Add kiosk user
-RUN useradd -m -G wheel kiosk && \
+# Add kiosk user (without sudo privileges for security)
+RUN useradd -m kiosk && \
     echo "kiosk:kiosk" | chpasswd
 
 # Create kiosk autostart configuration
